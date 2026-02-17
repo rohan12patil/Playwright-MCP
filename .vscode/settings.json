@@ -1,3 +1,7 @@
 {
-    "github.copilot.nextEditSuggestions.enabled": false
+    "github.copilot.nextEditSuggestions.enabled": false,
+    // Recommended workspace settings for Playwright MCP artifacts
+    // Note: Key names may differ depending on the extension version. Adjust as needed.
+    "mcp.playwright.artifacts.screenshots": "${workspaceFolder}/test-results/screenshots",
+    "mcp.playwright.artifacts.logs": "${workspaceFolder}/test-results/logs"
 }

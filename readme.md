@@ -161,6 +161,27 @@ Playwright-MCP/
 
 ✅ **User Flow Testing** - Test complete workflows from navigation to form submission
 
+
+Keep the MCP server running separately; this script only manages local artifact files produced by manual runs.
+
+## Save Artifacts Directly to `test-results` (recommended)
+
+To avoid collecting artifacts after the run, configure the Playwright MCP extension to write screenshots and logs directly into the repository `test-results` folder.
+
+1. Open the VS Code Extensions view (`Ctrl+Shift+X`) and find the Playwright MCP extension (search `@mcp playwright`).
+2. Click the extension's settings menu (three-dot icon) and choose **Show Configuration (JSON)** or **Show Configuration**.
+3. In the configuration JSON, add or update the artifact paths so screenshots and logs point to the workspace `test-results` directory. 
+
+```json
+{
+   "artifacts": {
+      "screenshots": "${workspaceFolder}/test-results/screenshots",
+      "logs": "${workspaceFolder}/test-results/logs"
+   }
+}
+```
+ After saving configuration, extensions will store artifacts directly in `test-results/` on each run, eliminating the need for a separate cleanup step.
+
 ## Example Test Execution
 
 See `test-results/dashboard-test-report.md` for an example of a completed manual test with:
