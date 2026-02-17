@@ -53,6 +53,6 @@ Example report format:
 
 Generate a .md file with the report in the 'test-results' directory and include any relevant screenshots or snapshots.
 
-Take screenshots or snapshots of the page if necessary to illustrate issues or confirm expected behaviour.
+Take screenshots or snapshots of the page if necessary to illustrate issues or confirm expected behaviour. save them in the 'test-results' directory
 
 close the browser after completing the manual test.
